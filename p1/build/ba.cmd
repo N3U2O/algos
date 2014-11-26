@@ -1,0 +1,1 @@
+g++ -Wall -o bin/p1.exe ../*.cpp && cd bin

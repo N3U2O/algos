@@ -9,11 +9,12 @@
 
 // this version uses a fixed dataset in the "integers" file.
 
-#include <iostream>
-#include <fstream>
-#include <cstdlib>
-#include <utility>
-#include <algorithm>
+#include <iostream>     // for cout/cin
+#include <fstream>      // for I/O from files
+#include <cstdlib>      // for atoi
+#include <vector>       // for dynamic array
+#include <utility>      // for pair
+#include <algorithm>    // for swap
 
 const int niMax = 100;
 
@@ -29,13 +30,17 @@ int main(int argc, char** argv)
         a = atoi(argv[1]);
         b = atoi(argv[2]);
         if (a > b) std::swap(a,b);
-        std::cout << "A = " << a << ", B = " << b << std::endl;
-    
-        std::ifstream ifile;
-        ifile.open("integers");
+        std::cout << "Bounds: A = " << a << ", B = " << b << std::endl;
+
+        // read the input file to integers
+        std::ifstream ifile("integers");
         int i;
+        std::vector<int> ai;
         while (ifile >> i)
-            std::cout << i << " ";
+        {
+            ai.push_back(i);
+            std::cout << ai.back() << " ";
+        }
     }
     return 0;
 }
