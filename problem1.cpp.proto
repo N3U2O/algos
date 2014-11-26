@@ -1,0 +1,15 @@
+// program to select from an array of integers
+// all pairs of which the sum is between A and B
+
+// Usage: p1 A B i1 i2 i3 ...
+
+#include <iostream>
+
+int main(int argc, char** argv)
+{
+    std::cout << "Args (" << argc << "):" << std::endl;
+    for (int i = 0; i < argc-1; ++i)
+        std::cout << argv[i] << ", ";
+    std::cout << argv[argc-1] << std::endl;
+    return 0;
+}
