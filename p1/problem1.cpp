@@ -13,8 +13,6 @@
 #include <utility>      // for pair
 #include <algorithm>    // for swap
 
-const int niMax = 100;
-
 int findPairsWithSumIn(int lower, int upper, std::vector<int>& v);
 
 // =========================================================================
@@ -43,6 +41,7 @@ int main(int argc, char** argv)
             std::cout << ai.back() << " ";
         }
         std::cout << "]." << std::endl;
+        ifile.close();
 
         // now that the array of integers is in place, find pairs, that
         // add up to a number between the given bounds! :)
